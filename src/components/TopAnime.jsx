@@ -23,6 +23,11 @@ const TopAnime20 = () => {
   }, []);
 
   return (
+    <div className="">
+      {topAnime.map((anime) => (
+        
+      ))}
+    </div>
   );
 };
 
