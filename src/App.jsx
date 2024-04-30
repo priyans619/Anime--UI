@@ -1,14 +1,12 @@
+import React from 'react';
+import TopAnime from './components/TopAnime';
 
-function App() {
-
+const App = () => {
   return (
-    <>
-      <div>
-        <h1>Vite + React</h1>
-      </div>
+    <div className=" bg-orange-50 mx-auto px-4 py-8">
+      <TopAnime />
+    </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default App
+export default App;
