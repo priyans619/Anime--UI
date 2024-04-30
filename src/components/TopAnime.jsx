@@ -26,12 +26,12 @@ const TopAnime20 = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {topAnime.map((anime) => (
-        <div key={anime.mal_id} className="bg-white rounded-lg shadow-md p-4">
-          <span className="text-sm font-bold text-gray-600">{`#${anime.rank}`}</span>
+        <div key={anime.mal_id} className="relative bg-white rounded-lg shadow-md">
+          <span className="absolute bg-pink-500 px-2 py-1 top-0 right-0 text-sm font-bold text-gray-600">{`${anime.rank}`}</span>
           <img
             src={anime.images.jpg.image_url}
             alt={anime.title}
-            className="mt-2 h-48 w-full object-cover"
+            className="h-48 w-full object-cover"
             style={{ height: '250px' }}
           />
           <h2 className="text-lg text-center font-bold mt-2 overflow-hidden line-clamp-2">{anime.title}</h2>
