@@ -14,6 +14,7 @@ const TopAnime20 = () => {
         if (!data.data) {
           throw new Error('Top anime data is undefined');
         }
+        setTopAnime(data.data.slice(0, 20));
       } catch (error) {
         console.error('Error fetching top anime:', error);
       }
