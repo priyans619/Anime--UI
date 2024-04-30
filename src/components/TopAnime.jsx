@@ -31,7 +31,7 @@ const TopAnime20 = () => {
           <img
             src={anime.images.jpg.image_url}
             alt={anime.title}
-            className="h-48 w-full object-cover"
+            className="rounded-t-lg h-48 w-full object-cover"
             style={{ height: '250px' }}
           />
           <h2 className="text-lg text-center font-bold mt-2 overflow-hidden line-clamp-2">{anime.title}</h2>
