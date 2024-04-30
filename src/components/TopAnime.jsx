@@ -28,8 +28,13 @@ const TopAnime20 = () => {
       {topAnime.map((anime) => (
         <div key={anime.mal_id} className="bg-white rounded-lg shadow-md p-4">
           <span className="text-sm font-bold text-gray-600">{`#${anime.rank}`}</span>
-          <img src={anime.images.jpg.image_url} alt={anime.title} className="mt-2 h-48 w-full object-cover" />
-          <h2 className="text-lg font-bold mt-2">{anime.title}</h2>
+          <img
+            src={anime.images.jpg.image_url}
+            alt={anime.title}
+            className="mt-2 h-48 w-full object-cover"
+            style={{ height: '250px' }}
+          />
+          <h2 className="text-lg text-center font-bold mt-2 overflow-hidden line-clamp-2">{anime.title}</h2>
         </div>
       ))}
     </div>
