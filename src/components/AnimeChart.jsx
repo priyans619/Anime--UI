@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const ChartComponent = () => {
   const [animeData, setAnimeData] = useState([]);
@@ -25,6 +25,29 @@ const ChartComponent = () => {
 
     fetchData();
   }, []);
+
+  const processAnimeData = (data) => {
+    const animeMap = new Map();
+    data.forEach((anime) => {
+      if (!anime.aired || !anime.aired.from || !anime.title) {
+        console.error('Error: Data is missing required fields.');
+        return;
+      }
+      const year = new Date(anime.aired.from).getFullYear();
+      if (!animeMap.has(year)) {
+        animeMap.set(year, []);
+      }
+      animeMap.get(year).push(anime.title);
+    });
+
+    const sortedYears = Array.from(animeMap.keys()).sort((a, b) => a - b);
+
+    const processedData = sortedYears.map((year) => {
+      return { year, anime: animeMap.get(year).slice(0, 20) }; // Limit to top 20 anime per year
+    });
+
+    return processedData;
+  };
 
   return (
     <div style={{ width: '100%', height: 400 }}>
