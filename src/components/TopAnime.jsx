@@ -51,7 +51,7 @@ const TopAnime20 = () => {
             className="rounded-t-lg h-48 w-full object-cover"
             style={{ height: '300px' }}
           />
-          <h2 className="text-lg text-center font-bold overflow-hidden line-clamp-2">{anime.title}</h2>
+          <h2 className="text-md text-center font-bold overflow-hidden line-clamp-2 bg-white rounded-lg" style={{ height: '50px', fontSize: '16px' }}>{anime.title}</h2>
           {expandedCard === anime.mal_id && (
             <div className="text-sm p-2 absolute bottom-0 left-0 right-0 bg-white rounded-b-lg">
               <p><strong>Release Date:</strong> {anime.aired.from.split('T')[0]}</p>
