@@ -24,6 +24,9 @@ const TopAnime20 = () => {
     fetchTopAnime();
   }, []);
 
+  const handleCardClick = (animeId) => {
+    setExpandedCard(animeId === expandedCard ? null : animeId);
+  };
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 p-12 relative">
