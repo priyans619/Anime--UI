@@ -42,7 +42,7 @@ const TopAnime20 = () => {
             cursor: 'pointer',
             transformOrigin: 'top center'
           }}
-         
+          onClick={() => handleCardClick(anime.mal_id)}
         >
           <span className="absolute bg-pink-500 rounded-tr-lg px-2 py-1 top-0 right-0 text-sm font-bold text-gray-600">{`${anime.rank}`}</span>
           <img
