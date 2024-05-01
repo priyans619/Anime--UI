@@ -54,9 +54,9 @@ const TopAnime20 = () => {
           <h2 className="text-lg text-center font-bold overflow-hidden line-clamp-2">{anime.title}</h2>
           {expandedCard === anime.mal_id && (
             <div className="text-sm p-2 absolute bottom-0 left-0 right-0 bg-white rounded-b-lg">
-              <p><span className="">Release Date:</span> {anime.aired.from}</p>
-              <p><span className="">Latest Date:</span> {anime.aired.to || 'Now'}</p>
-              <p><span className="">Rated:</span> {anime.rating}</p>
+              <p><strong>Release Date:</strong> {anime.aired.from.split('T')[0]}</p>
+              <p><strong>Latest Date:</strong> {anime.aired.to ? anime.aired.to.split('T')[0] : 'Now'}</p>
+              <p><strong>Rated:</strong> {anime.rating}</p>
             </div>
           )}
         </div>
