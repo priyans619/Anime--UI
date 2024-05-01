@@ -33,7 +33,7 @@ const TopAnime20 = () => {
       {topAnime.map((anime) => (
         <div
           key={anime.mal_id}
-          className={`relative p-1 transition-transform duration-300 ease-out overflow-hidden ${expandedCard === anime.mal_id ? 'z-30 scale-125' : 'z-0 transform scale-100'
+          className={`relative transition-transform duration-300 ease-out overflow-hidden ${expandedCard === anime.mal_id ? 'z-30 scale-125' : 'z-0 transform scale-100'
             }`}
 
           style={{
