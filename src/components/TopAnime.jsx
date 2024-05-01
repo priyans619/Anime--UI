@@ -36,6 +36,11 @@ const TopAnime20 = () => {
           className={`relative p-1 transition-transform duration-300 ease-out overflow-hidden ${expandedCard === anime.mal_id ? 'z-30 scale-125' : 'z-0 transform scale-100'
             }`}
 
+          style={{
+            width: '100%',
+            height: '300px',
+          }}
+         
         >
           <span className="absolute bg-pink-500 rounded-tr-lg px-2 py-1 top-0 right-0 text-sm font-bold text-gray-600">{`${anime.rank}`}</span>
           <img
