@@ -49,6 +49,23 @@ const ChartComponent = () => {
     return processedData;
   };
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white border-2 border-red-500 rounded-lg p-4">
+          <p className="text-center font-bold">{`${label}`}</p>
+          <ul className="pl-4">
+            {payload[0].payload.anime.map((anime, index) => (
+              <li key={index}>{anime}</li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
+  
+    return null;
+  };
+
   return (
     <div style={{ width: '100%', height: 400 }}>
       <ResponsiveContainer>
